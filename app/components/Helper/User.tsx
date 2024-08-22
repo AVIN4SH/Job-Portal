@@ -3,6 +3,9 @@
 import { Session } from "next-auth";
 import { signOut } from "next-auth/react";
 import React from "react";
+import logoutImage from "@/public/images/logout.png";
+import Image from "next/image";
+import { Tooltip } from "react-tooltip";
 
 interface Props {
   session: Session;
@@ -16,11 +19,18 @@ const User = ({ session }: Props) => {
       }}
       className="cursor-pointer"
     >
-      <img
-        src={`${session?.user?.image}`}
-        alt="user"
-        className="w-[50px] h-[50px] rounded-full "
-      />
+      {session.user?.image && (
+        <>
+          <Image
+            data-tooltip-id="signout"
+            data-tooltip-content="Sign Out"
+            src={logoutImage}
+            alt="user"
+            className="w-12 h-12 p-2 rounded-full"
+          />
+          <Tooltip id="signout" />
+        </>
+      )}
     </div>
   );
 };

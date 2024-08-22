@@ -28,7 +28,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="hidden lg:block">
+          <div className="">
             <Image src={HeroImage} alt="Image" width={700} height={400} />
           </div>
         </div>
