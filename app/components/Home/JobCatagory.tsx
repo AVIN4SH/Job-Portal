@@ -3,7 +3,7 @@ import JobCatagoryCard from "../Helper/JobCatagoryCard";
 
 const JobCatagory = () => {
   return (
-    <div className="pt-20 pb-12">
+    <div id="popular" className="pt-20 pb-12">
       <Heading
         mainHeading="Popular Job Catagories"
         subHeading="2020 jobs live - 194 added today"

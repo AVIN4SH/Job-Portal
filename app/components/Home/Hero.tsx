@@ -1,5 +1,6 @@
 import HeroImage from "@/public/images/hero.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -17,15 +18,11 @@ const Hero = () => {
               single day
             </p>
             <div className="mt-[1.5rem]">
-              <input
-                required
-                type="text"
-                placeholder="Search Job"
-                className="w-[60%] md:w-[70%] lg:w-[75%] px-3 py-2 md:px-5 md:py-4 outline-none rounded-l-md bg-gray-200"
-              />
-              <button className="px-3 py-2 md:px-5 md:py-4 outline-none rounded-r-md bg-blue-500 text-white">
-                Search
-              </button>
+              <a href={"#popular"}>
+                <button className="px-3 py-2 md:px-5 md:py-4 outline-none rounded-md bg-blue-500 text-white hover:bg-blue-700 transition-all duration-300">
+                  <span className="">View Popular Jobs</span>
+                </button>
+              </a>
             </div>
           </div>
           <div className="">

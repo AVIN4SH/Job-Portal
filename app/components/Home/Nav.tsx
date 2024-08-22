@@ -12,15 +12,19 @@ const Nav = async () => {
     <div className="h-[12vh] overflow-hidden shadow-md">
       <div className="w-[90%] md:w-[80%] h-[100%] mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="w-[150px] h-[150px] md:w-[250px] md:h-[250px]">
-          <Link href={"/"}>
+        <div className="w-36">
+          <Link
+            href={"/"}
+            className="flex flex-col justify-center items-center text-center gap-0.5"
+          >
             <Image
               src={LogoImage}
               alt="Logo"
               width={250}
               height={250}
-              className="w-[100%] h-[100%]"
+              className="w-10 h-10"
             />
+            <p className="tracking-widest font-semibold">getJob</p>
           </Link>
         </div>
         <div className="flex items-center space-x-4">
@@ -34,9 +38,11 @@ const Nav = async () => {
           )}
           {/* When Logged in we display user */}
           {session && (
-            <button className="px-4 py-1.5 text-[14px] sm:text-[16px] sm:px-6 sm:py-2 bg-orange-600 font-semibold text-white rounded-lg hover:bg-orange-800 transition-all duration-300 ">
-              Post a Job
-            </button>
+            <Link href="/postjob">
+              <button className="px-4 py-1.5 text-[14px] sm:text-[16px] sm:px-6 sm:py-2 bg-orange-600 font-semibold text-white rounded-lg hover:bg-orange-800 transition-all duration-300 ">
+                Post a Job
+              </button>
+            </Link>
           )}
           {session && <User session={session} />}
         </div>
