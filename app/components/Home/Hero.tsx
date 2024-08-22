@@ -17,10 +17,15 @@ const Hero = () => {
               their search of work, making over 140,000 applications every
               single day
             </p>
-            <div className="mt-[1.5rem]">
+            <div className="mt-[1.5rem] flex flex-row justify-start items-center text-center gap-2 md:gap-4 lg:gap-6">
               <a href={"#popular"}>
                 <button className="px-3 py-2 md:px-5 md:py-4 outline-none rounded-md bg-blue-500 text-white hover:bg-blue-700 transition-all duration-300">
                   <span className="">View Popular Jobs</span>
+                </button>
+              </a>
+              <a href={"/postjob"}>
+                <button className="px-3 py-2 md:px-5 md:py-4 outline-none rounded-md bg-blue-500 text-white hover:bg-blue-700 transition-all duration-300">
+                  <span className="">Post a Job</span>
                 </button>
               </a>
             </div>

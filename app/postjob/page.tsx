@@ -2,7 +2,10 @@ import Heading from "../components/Helper/Heading";
 
 const PostJob = () => {
   return (
-    <div className="max-w-6xl w-11/12 lg:w-4/5 mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+    <div
+      id="postjob"
+      className="max-w-6xl w-11/12 lg:w-4/5 mx-auto p-6 bg-white shadow-md rounded-lg mt-10"
+    >
       <Heading mainHeading="Post a Job" subHeading="" />
       <form>
         {/* Job Title */}
